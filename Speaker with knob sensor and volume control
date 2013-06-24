@@ -1,0 +1,19 @@
+void setup()
+{
+ pinMode(9, OUTPUT);
+ Serial.begin(9600);
+ 
+  
+}
+
+void loop()
+{
+  
+  double sensorReading;
+  sensorReading = analogRead(A0);
+  sensorReading = map(sensorReading, 0, 1023, 80, 160);
+ tone(9,sensorReading, 10);
+ Serial.println(sensorReading);
+  delay(1);
+  
+}
