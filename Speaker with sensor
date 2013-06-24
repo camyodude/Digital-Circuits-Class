@@ -1,0 +1,15 @@
+void setup()
+{
+ pinMode(9, OUTPUT);
+ Serial.begin(9600);
+ 
+  
+}
+
+void loop()
+{
+  float sensorReading = analogRead(A0)*25.0/ 1023;
+ tone(9,sensorReading * 50, 10);
+ Serial.println(sensorReading*25);
+  delay(1);
+}
