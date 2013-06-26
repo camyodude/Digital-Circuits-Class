@@ -1,0 +1,21 @@
+#include <Servo.h>
+Servo George;
+Servo Fred;
+int posGeorge;
+int posFred;
+
+void setup()
+{
+  George.attach(9);
+  Fred.attach(6);
+  
+}
+void loop()
+{
+  
+  posGeorge = random (0,180);
+  posFred = random(0, 90);
+  George.write(posGeorge);
+  Fred.write(posFred);
+  delay(300);
+}
